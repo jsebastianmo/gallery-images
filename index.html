@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <span style="--i: 1"> 	
+                <img alt="imagen aleatoria" src="https://picsum.photos/id/237/700/400">
+            </span>
+            <span style="--i: 2"> 	
+                <img alt="imagen aleatoria" src="https://picsum.photos/id/238/700/400">
+            </span>
+            <span style="--i: 3"> 	
+                <img alt="imagen aleatoria" src="https://picsum.photos/id/239/700/400">
+            </span>
+            <span style="--i: 4"> 	
+                <img alt="imagen aleatoria" src="https://picsum.photos/id/240/700/400">
+            </span>
+            <span style="--i: 5"> 	
+                <img alt="imagen aleatoria" src="https://picsum.photos/id/241/700/400">
+            </span>
+            <span style="--i: 6"> 	
+                <img alt="imagen aleatoria" src="https://picsum.photos/id/242/700/400">
+            </span>
+            <span style="--i: 7"> 	
+                <img alt="imagen aleatoria" src="https://picsum.photos/id/243/700/400">
+            </span>
+            <span style="--i: 8"> 	
+                <img alt="imagen aleatoria" src="https://picsum.photos/id/244/700/400">
+            </span>
+            <span style="--i: 9"> 	
+                <img alt="imagen aleatoria" src="https://picsum.photos/id/245/700/400">
+            </span>
+            <span style="--i: 10"> 	
+                <img alt="imagen aleatoria" src="https://picsum.photos/id/246/700/400">
+            </span>
+        </div>
+        <div class="btns">
+            <div class="btn prev"></div>
+            <div class="btn next"></div>
+        </div>
+    </div>
+
+    <script>
+        const box = document.querySelector(".box");
+        const prev = document.querySelector(".prev");
+        const next = document.querySelector(".next");
+        let degrees = 0;
+        prev.addEventListener("click", ()=>{
+            degrees += 45;
+            box.style = `transform: perspective(1000px) rotateY(${degrees}deg)`
+        })
+        next.addEventListener("click", ()=>{
+            degrees -= 45;
+            box.style = `transform: perspective(1000px) rotateY(${degrees}deg)`
+        })
+    </script>
+</body>
+</html>
